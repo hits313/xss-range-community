@@ -1,58 +1,63 @@
 ---
-name: "🛡️ Security report"
-about: "Report a real bug in the XSS Range platform (NOT a lab solve)."
+name: "Security report"
+about: "Report a security bug in the live site (not a lab solve)."
 title: "[Security] "
 labels: ["security", "triage"]
 assignees: ["hits313"]
 ---
 
-> **Before filing:** if the impact is genuinely sensitive (full RCE, secret/PII
-> leak, total ATO), please use the
-> [private GHSA advisory](https://github.com/hits313/xss-range-community/security/advisories/new)
-> instead of a public issue. For everything else, public is fine.
+> If your finding has real impact, please use the
+> [private security advisory](https://github.com/hits313/xss-range-community/security/advisories/new)
+> instead of this public issue. Use this form only for low-risk reports.
 >
-> **The 14 labs are intentionally vulnerable** — XSS / sanitizer bypass inside
-> any `/labs/*` route is **out of scope**. The platform shell (auth, profile,
-> solve, hint, leaderboard, cron, Vercel config) is **in scope**.
+> The labs are intentionally vulnerable. Cross-site scripting and sanitizer
+> bypasses inside `/labs/*` are out of scope. See
+> [SECURITY.md](https://github.com/hits313/xss-range-community/blob/main/SECURITY.md)
+> for the full scope.
 
 ## Summary
-<!-- One-line description of the bug. -->
 
-## Severity (your guess)
-- [ ] P0 — RCE, full account takeover, mass cross-user data access
-- [ ] P1 — single-user ATO, cross-user data read/write, solve mass-mint
-- [ ] P2 — privacy regression, anti-cheat bypass, rate-limit bypass
-- [ ] P3 — misconfig, info-leak, header-policy issue
+<!-- One sentence describing the bug. -->
 
-## Affected surface
-- URL / endpoint:
-- Component (e.g. `src/app/api/profile/route.ts`, Vercel project config, blob ACL):
-- Vercel config issue? (env, blob, cron, build)  Yes / No
+## Severity (your estimate)
 
-## Reproduction steps
+- [ ] Critical
+- [ ] High
+- [ ] Medium
+- [ ] Low
+
+## Affected area
+
+- URL or page:
+- Brief description of the affected feature:
+
+## Reproduction
+
 1.
 2.
 3.
 
-```http
-# Minimal request showing the bug. Redact your real session cookie.
+```
+# Optional minimal request. Redact your own session cookie.
 ```
 
 ## Impact
-<!-- What an attacker can actually do. Concrete, not theoretical. -->
+
+<!-- What can an attacker do. Be concrete. -->
 
 ## Suggested fix
-<!-- Optional. One-line patch idea is enough. -->
+
+<!-- Optional. -->
 
 ## Disclosure preferences
-- Credit me as: <!-- handle / name / anonymous -->
-- I'm OK with public disclosure after fix: Yes / No
-- Embargo requested: <!-- e.g. 45 days -->
+
+- Credit me as:
+- OK with public disclosure after the fix lands: Yes / No
 
 ---
 
-> By submitting you confirm: tests were only against your own account, no
-> destructive PoCs, no traffic floods, no other users' data accessed beyond
-> what was needed to demonstrate the issue. See
-> [SECURITY.md](https://github.com/hits313/xss-range-community/blob/main/SECURITY.md)
-> for the full policy.
+By submitting you confirm that tests were carried out against your own
+account, that no other users' data was accessed beyond what was needed to
+demonstrate impact, and that no destructive actions were taken. See
+[SECURITY.md](https://github.com/hits313/xss-range-community/blob/main/SECURITY.md)
+for the full policy.

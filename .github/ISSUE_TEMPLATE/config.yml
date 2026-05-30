@@ -1,14 +1,11 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 🛡️ Private security advisory (GHSA)
+  - name: Private security advisory
     url: https://github.com/hits313/xss-range-community/security/advisories/new
-    about: For sensitive impact (full RCE, secret leak, mass ATO) — keeps repro private until fix.
-  - name: 📄 Security policy
+    about: Report a security bug privately. Preferred for anything with real impact.
+  - name: Security policy
     url: https://github.com/hits313/xss-range-community/blob/main/SECURITY.md
-    about: Scope, SLA, embargo, safe-harbor — read before filing.
-  - name: ☕ Buy me a coffee
-    url: https://buymeacoffee.com/shahhits12u
-    about: Support the range
-  - name: 🌐 Live range
+    about: Scope, response times, embargo, safe harbour.
+  - name: Live range
     url: https://xss-range.vercel.app
-    about: Visit the labs
+    about: Visit the labs.
